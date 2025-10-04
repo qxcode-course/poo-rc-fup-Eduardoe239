@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-04_17-09-21",
+            "content": "@@ -257,21 +257,24 @@\n     def \n-enter\n+maxPassa\n (self):%0A\n@@ -556,23 +556,28 @@\n def \n-fuel\n+gasMax\n (self, \n-amou\n+increme\n nt: \n@@ -606,12 +606,15 @@\n  += \n-amou\n+increme\n nt%0A \n@@ -684,16 +684,17 @@\n ef drive\n+ \n (self, d\n@@ -1257,16 +1257,18 @@\n e.split(\n+%22%22\n )%0A%0A     \n@@ -1360,21 +1360,24 @@\n   carro.\n-enter\n+maxPassa\n ()%0A     \n@@ -1421,21 +1421,23 @@\n   print(\n+%22\n carro\n+%22\n )%0A      \n@@ -1576,20 +1576,22 @@\n   carro.\n-fuel\n+gasMax\n (increme\n@@ -1704,11 +1704,10 @@\n t)%0A%0A\n+\n main()\n-%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-10-04_17-10-45",
+            "content": "class Carro:\n    def __init__(self, passa: int = 0, gas: int = 0, km: int = 0):\n        self.passa = passa\n        self.gas = gas\n        self.km = km\n\n    def __str__(self) -> str:\n        return f\"pass: {self.passa}, gas: {self.gas}, km: {self.km}\"\n    \n    def enter(self):\n        if self.passa < 2:\n            self.passa += 1\n        else:\n            print(\"fail: limite de pessoas atingido\")\n\n    def leave(self):\n        if self.passa == 0:\n            print(\"fail: nao ha ninguem no carro\")\n        else:\n            self.passa -= 1\n    \n    def fuel(self, amount: int):\n        self.gas += amount\n        if self.gas > 100:\n            self.gas = 100\n    \n    def drive(self, distance: int):\n        if self.passa == 0:\n            print(\"fail: nao ha ninguem no carro\")\n        elif self.gas == 0:\n            print(\"fail: tanque vazio\")\n        else:\n            if distance > self.gas:\n                print(f\"fail: tanque vazio apos andar {self.gas} km\")\n                self.km += self.gas\n                self.gas = 0\n            else:\n                self.km += distance\n                self.gas -= distance\n\n\ndef main():\n    carro = Carro()\n\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"enter\":\n            carro.enter()\n        elif args[0] == \"show\":\n            print(carro)\n        elif args[0] == \"leave\":\n            carro.leave()\n        elif args[0] == \"fuel\":\n            increment = int(args[1])\n            carro.fuel(increment)\n        elif args[0] == \"drive\":\n            increment = int(args[1])\n            carro.drive(increment)\n\nmain()\n",
+            "lines": "65"
+        }
+    ]
+}
