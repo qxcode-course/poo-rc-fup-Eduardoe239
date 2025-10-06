@@ -1,0 +1,12 @@
+2025-10-06 00:11:05, MOVE, v:1, k:carro, mode:PICK
+2025-10-06 00:11:07, EXEC, v:1, k:carro, mode:FULL, rate:100
+2025-10-06 00:11:19, EXEC, v:1, k:carro, mode:FULL, rate:100
+2025-10-06 00:11:48, MOVE, v:1, k:enxugar, mode:PICK
+2025-10-06 00:11:49, EXEC, v:1, k:enxugar, mode:FULL, rate:100
+2025-10-06 00:26:36, MOVE, v:1, k:calculadora, mode:PICK
+2025-10-06 00:26:37, EXEC, v:1, k:calculadora, mode:FULL, rate:0, size:61
+2025-10-06 00:29:06, EXEC, v:1, k:calculadora, mode:FULL, rate:100, size:62
+2025-10-06 00:31:20, MOVE, v:1, k:calculadora, mode:BACK
+2025-10-06 00:32:07, MOVE, v:1, k:animal, mode:PICK
+2025-10-06 00:32:09, EXEC, v:1, k:animal, mode:FULL, rate:0, size:0
+2025-10-06 00:32:10, EXEC, v:1, k:animal, mode:FULL, rate:0
